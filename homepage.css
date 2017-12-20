@@ -43,16 +43,42 @@ div.bar{
     background: rgb(86,58,40);
     width: 85%;
     height: 0.8%;
-    z-index: 999;
+    z-index: 900;
     bottom: 18.4%;
     left: 3%;
     position: fixed;
 }
 
-div.ends{
-    border: 1px solid yellow;
+div.bar-tab{
+    border: 1px solid rgb(86,58,40);
+    background: rgb(86,58,40);
+    height: 30px;
+    width: 10px;
+    position: fixed;
+    bottom: 18.5%;
+    left: 26.8%;
+    /*add .5% to move each letter
+    start: 26.8
+    first end: 37.75
+    second end: 40.7*/
+}
+
+div.ends-left{
+    background-color: rgb(225,161,37);
     width: 50px;
     height: 100px;
+    position: fixed;
+    z-index: 999;
+    bottom: 13.5%;
+}
+div.ends-right{
+     background-color: rgb(225,161,37);
+    width: 50px;
+    height: 100px;
+    position: fixed;
+    z-index: 999;
+    bottom: 13.5%;
+    left: 88%;
 }
 div.side-bar{
 
