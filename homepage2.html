@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="homepage.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src='Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/lib/typewriter.js'></script>
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
+    </head>
+    <body>
+        <div class=image>
+            <div class='side-bar'>
+                <div class='side-bar-tab-icon'>
+                    <div class='icon'>
+                        <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class='side-bar-tab'>Current Projects</div>
+                <div class='side-bar-tab'>Past Work</div>
+                <div class='side-bar-tab'>Contact Me</div>
+            </div>
+            <div class='page'>
+                NAME: Kevin Liang 
+                <br><br>
+                OCCUPATION: Technical Business Requirements Wizard
+                <br><br>
+                SPECIAL SKILLS: Sweeping 
+                <br><br>
+                ASPIRATIONS: Eradicate all bed bugs from the planet
+                <br><br>
+            </div>
+            <div class='bar'></div>
+            <div class='ends-left'></div>
+            <div class='ends-right'></div>
+            <div class='bar-tab'></div>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            console.log('connected');
+            $(".page").animate({height:"17.8%"},{
+                duration: 500,
+                complete: function(){
+                     $(".page").append(
+                    "<span class='typewriter1'>" + " Also I have a big penis." + "</span"
+                    );
+                    $(".typewriter1").typewriter({'speed':80});
+                    $('.bar-tab').animate({left:'37.75%'},1600);
+                    $(".page").delay(2400).animate({height:"26.3%"},{
+                        duration: 1000,
+                        complete: function(){
+                            $(".page").append(
+                            "<br><br><br><br><br>" + "<span class='typewriter2'>" + " Interested in learning more?" + "</span>"
+                            );
+                            $(".typewriter2").typewriter({'speed':80});
+                            $(".page").delay(2400).animate({height:"75%"},{
+                                duration: 1000,
+                                complete: function(){
+                                    $(".icon").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+                                }
+                            })
+                        }
+                    })
+                }
+            })
+                               
+        });
+        
+     
+    </script>
+</html>
