@@ -38,16 +38,175 @@
         </div>
     </body>
     <script>
+        var ding = new Audio('typewriter-ding.mp3')
+        var beg_key = new Audio('beginning-key.mp3');
+        var mid_key_1 = new Audio('mid-key-1.mp3');
+        var mid_key_2 = new Audio('mid-key-1.mp3');
+        var end_key = new Audio('end-key.mp3');
+        var del = 30;
+        var dur = 155;
+        
+        function play_beg(){
+            beg_key.play()
+        };
+        
+        function play_midkey1(){
+            mid_key_1.play();
+        };
+        
+        function play_midkey2(){
+            mid_key_2.play();
+        }
+        
+        function play_end(){
+            end_key.play();
+        }
         $(document).ready(function(){
             console.log('connected');
             $(".page").animate({height:"17.8%"},{
                 duration: 500,
                 complete: function(){
                      $(".page").append(
-                    "<span class='typewriter1'>" + " Also I have a big penis." + "</span"
+                    "<span class='typewriter1'>" + " Also I am a littlestitious." + "</span"
                     );
-                    $(".typewriter1").typewriter({'speed':80});
-                    $('.bar-tab').animate({left:'37.75%'},1900);
+                    $(".typewriter1").typewriter({'speed':150});
+                    beg_key.play()
+                    $('.bar-tab').delay(del).animate({left:'27.4%'},{ //L
+                        start: play_midkey1(),
+                        duration: dur,
+                        complete: function(){
+                            $('.bar-tab').delay(del).animate({left:'27.85%'},{//S  
+                                start: play_midkey2(),
+                                duration: dur,
+                                complete: function(){
+                                    $('.bar-tab').delay(del).animate({left:'28.4%'},{//O
+                                        start: play_end(),
+                                        duration: dur,
+                                        complete: function(){
+                                            $('.bar-tab').delay(del).animate({left:'29.2%'},{//I
+                                                start: play_end(),
+                                                duration: dur,
+                                                complete: function(){
+                                                    $('.bar-tab').delay(del).animate({left:'30%'},{//A
+                                                        start: play_beg(),
+                                                        duration: dur,
+                                                        complete: function(){
+                                                            $('.bar-tab').delay(del).animate({left:'30.6%'},{//M
+                                                                start: play_end(),
+                                                                duration: dur,
+                                                                complete: function(){
+                                                                    $('.bar-tab').delay(del).animate({left:'31.45%'},{//A
+                                                                        start: play_end(),
+                                                                        duration: dur,
+                                                                        complete: function(){
+                                                                            $('.bar-tab').delay(del+100).animate({left:'32.3%'},{//L
+                                                                                start: play_beg(),
+                                                                                duration: dur,
+                                                                                complete: function(){
+                                                                                    $('.bar-tab').delay(del).animate({left:'32.8%'},{//I
+                                                                                        start: play_midkey1(),
+                                                                                        duration: dur,
+                                                                                        complete: function(){
+                                                                                            $('.bar-tab').delay(del).animate({left:'33.3%'},{//T
+                                                                                                start: play_midkey2(),
+                                                                                                duration: dur,
+                                                                                                complete: function(){
+                                                                                                    $('.bar-tab').delay(del).animate({left:'33.8%'},{//T
+                                                                                                        start: play_midkey1(),
+                                                                                                        duration: dur,
+                                                                                                        complete: function(){
+                                                                                                            $('.bar-tab').delay(del).animate({left:'34.3%'},{//L
+                                                                                                                start: play_midkey2(),
+                                                                                                                duration: dur,
+                                                                                                                complete: function(){
+                                                                                                                    $('.bar-tab').delay(del).animate({left:'34.8%'},{//E
+                                                                                                                        start:play_midkey1(),
+                                                                                                                        duration: dur,
+                                                                                                                        complete: function(){
+                                                                                                                            $('.bar-tab').delay(del).animate({left:'35.3%'},{//S
+                                                                                                                                start: play_midkey2(),
+                                                                                                                                duration: dur-55,
+                                                                                                                                complete: function(){
+                                                                                                                                    $('.bar-tab').delay(del).animate({left:'35.8%'},{
+                                                                                                                                        start: play_midkey1(),
+                                                                                                                                        duration: dur-55,
+                                                                                                                                        complete: function(){
+                                                                                                                                            $('.bar-tab').delay(del).animate({left:'36.3%'},{
+                                                                                                                                                start: play_midkey2(),
+                                                                                                                                                duration: dur-55,
+                                                                                                                                                complete: function(){
+                                                                                                                                                    $('.bar-tab').delay(del).animate({left:'36.9%'},{
+                                                                                                                                                        start: play_midkey1(),
+                                                                                                                                                        duration: dur-55,
+                                                                                                                                                        complete: function(){
+                                                                                                                                                            $('.bar-tab').delay(del).animate({left:'37.35%'},{
+                                                                                                                                                                start: play_midkey2(),
+                                                                                                                                                                duration: dur-55,
+                                                                                                                                                                complete: function(){
+                                                                                                                                                                    $('.bar-tab').delay(del).animate({left:'37.9%'},{
+                                                                                                                                                                        start: play_midkey1(),
+                                                                                                                                                                        duration: dur-55,
+                                                                                                                                                                        complete: function(){
+                                                                                                                                                                            $('.bar-tab').delay(del).animate({left:'38.5%'},{
+                                                                                                                                                                                start: play_midkey2(),
+                                                                                                                                                                                duration: dur-55,
+                                                                                                                                                                                complete: function(){
+                                                                                                                                                                                    $('.bar-tab').delay(del).animate({left:'39%'},{
+                                                                                                                                                                                        start: play_midkey1(),
+                                                                                                                                                                                        duration: dur-55,
+                                                                                                                                                                                        complete: function(){
+                                                                                                                                                                                            $('.bar-tab').delay(del).animate({left:'39.45%'},{
+                                                                                                                                                                                                start: play_end(),
+                                                                                                                                                                                                duration: dur-55,
+                                                                                                                                                                                                complete: function(){
+                                                                                                                                                                                                ding.play();
+                                                                                                                                                                                                }   
+                                                                                                                                                                                            })
+                                                                                                                                                                                        }   
+                                                                                                                                                                                    })
+                                                                                                                                                                                }   
+                                                                                                                                                                            })
+                                                                                                                                                                        }   
+                                                                                                                                                                    })
+                                                                                                                                                                }   
+                                                                                                                                                            })
+                                                                                                                                                        }   
+                                                                                                                                                    })
+                                                                                                                                                }   
+                                                                                                                                            })
+                                                                                                                                        }   
+                                                                                                                                    })
+                                                                                                                                }   
+                                                                                                                            })
+                                                                                                                        }   
+                                                                                                                    })
+                                                                                                                }   
+                                                                                                            })
+                                                                                                        }   
+                                                                                                    })
+                                                                                                }   
+                                                                                            })
+                                                                                        }   
+                                                                                    })
+                                                                                }   
+                                                                            })
+                                                                        }   
+                                                                    })
+                                                                }   
+                                                            })
+                                                        }   
+                                                    })
+                                                }   
+                                            })
+                                        }   
+                                    })
+                                }
+                            })
+                        }
+                    });
+                    
+                    /*
+                
                     $(".page").delay(2400).animate({height:"26.3%"},{
                         duration: 1000,
                         complete: function(){
@@ -63,11 +222,14 @@
                             })
                         }
                     })
+                    
+                    */
                 }
             })
-                               
+                            
         });
         
+    
      
     </script>
 </html>

@@ -51,12 +51,12 @@ div.bar{
 
 div.bar-tab{
     border: 1px solid rgb(86,58,40);
-    background: rgb(86,58,40);
-    height: 30px;
+    /background: rgb(86,58,40);
+    height: 600px;
     width: 10px;
     position: fixed;
     bottom: 18.5%;
-    left: 26.8%;
+    left: 26.3%;
     /*add .5% to move each letter
     start: 26.8
     first end: 37.75
