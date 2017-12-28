@@ -21,6 +21,7 @@ div.image{
     position: fixed;
     margin: 0 auto;
     z-index: 1;
+    border: 1px solid red;
 }
 
 
@@ -32,10 +33,10 @@ div.page{
     padding-top: 2%;
     padding-left: 2%;
     padding-right: 2%;
-    position: fixed;
     height: 14.5%;
     background: white;
     font-family: 'Special Elite', cursive;
+    position:absolute;
 }
 
 div.bar{
@@ -46,24 +47,24 @@ div.bar{
     z-index: 900;
     bottom: 18.85%;
     left: -1%;
-    position: fixed;
+    position: absolute;
 }
 
 div.bar-tab{
     border: 1px solid rgb(86,58,40);
     background: rgb(86,58,40);
     height: 30px;
-    width: 8px;
-    position: fixed;
+    width: 20px;
+    position: absolute;
     bottom: 18.85%;
-    left: 26.9%;
+    left: 26.6%;
 }
 
 div.ends-left{
     background-color: rgb(225,161,37);
     width: 50px;
     height: 100px;
-    position: fixed;
+    position: absolute;
     z-index: 999;
     bottom: 13.85%;
     left: -4%;
@@ -72,7 +73,7 @@ div.ends-right{
      background-color: rgb(225,161,37);
     width: 50px;
     height: 100px;
-    position: fixed;
+    position: absolute;
     z-index: 999;
     bottom: 13.85%;
     left: 84%;

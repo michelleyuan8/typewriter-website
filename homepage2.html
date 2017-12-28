@@ -1,13 +1,14 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" type='text/css' href="homepage">
+        <link rel="stylesheet" type='text/css' href="homepage.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type='application/javascript' src='Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/lib/typewriter'></script>
-        <link rel="stylesheet" type='text/css' href="font-awesome-4.7.0/css/font-awesome.min">
+        <script src='Minimal-jQuery-Animated-Text-Typing-Effect-Best-Typewriter/lib/typewriter.js'></script>
+        <link rel="stylesheet" type='text/css' href="font-awesome-4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
+        <script src='velocity-master/velocity.js'></script>
     </head>
     <body>
         <div class=image>
@@ -40,11 +41,11 @@
     <script>
         $(".icon").click(function(){
                 if($(".side-bar").hasClass('active')==false){
-                    $('.side-bar').animate({left:"0px"});
+                    $('.side-bar').velocity({left:"0px"});
                     $(".side-bar").addClass('active');
                 }
                 else{
-                    $('.side-bar').animate({left:"-139px"});
+                    $('.side-bar').velocity({left:"-139px"});
                     $(".side-bar").removeClass('active');
                 };
         });
@@ -74,8 +75,8 @@
         }
         $(window).load(function(){
             console.log('connected');
-            //$(".ends-left").animate({left:})
-            $(".page").animate({height:"17.8%"},{
+            //$(".ends-left").velocity({left:})
+            $(".page").velocity({height:"17.8%"},{
                 duration: 500,
                 complete: function(){
                     $(".page").append(
@@ -86,297 +87,297 @@
                 
                     $(".typewriter1").typewriter({'speed':150});
                     beg_key.play()
-                    $('.ends-left').delay(del).animate({left:'-3.5%'},{
+                    $('.ends-left').delay(del).velocity({left:'-3.5%'},{
                     duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'84.5%'},{
+                    $('.ends-right').delay(del).velocity({left:'84.5%'},{
                     duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'-0.5%'},{
+                    $('.bar').delay(del).velocity({left:'-0.5%'},{
                     duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'27.4%'},{ //L
+                    $('.bar-tab').delay(del).velocity({left:'27.4%'},{ //L
                     start: play_midkey1(),
                     duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'-3.05%'},{
+                    $('.ends-left').delay(del).velocity({left:'-3.05%'},{
                     duration: dur
                     })
-                     $('.ends-right').delay(del).animate({left:'84.95%'},{
+                     $('.ends-right').delay(del).velocity({left:'84.95%'},{
                     duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'-0.05%'},{
+                    $('.bar').delay(del).velocity({left:'-0.05%'},{
                     duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'27.85%'},{//S  
+                    $('.bar-tab').delay(del).velocity({left:'27.85%'},{//S  
                     start: play_midkey2(),
                     duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'-2.5%'},{
+                    $('.ends-left').delay(del).velocity({left:'-2.5%'},{
                     duration: dur
                     })
-                     $('.ends-right').delay(del).animate({left:'85.5%'},{
+                     $('.ends-right').delay(del).velocity({left:'85.5%'},{
                     duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'0.5%'},{
+                    $('.bar').delay(del).velocity({left:'0.5%'},{
                     duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'28.4%'},{//O
+                    $('.bar-tab').delay(del).velocity({left:'28.4%'},{//O
                     start: play_end(),
                     duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'-1.7%'},{
+                    $('.ends-left').delay(del).velocity({left:'-1.7%'},{
                     duration: dur
                     })
-                     $('.ends-right').delay(del).animate({left:'86.3%'},{
+                     $('.ends-right').delay(del).velocity({left:'86.3%'},{
                     duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'1.3%'},{
+                    $('.bar').delay(del).velocity({left:'1.3%'},{
                     duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'29.2%'},{//I
+                    $('.bar-tab').delay(del).velocity({left:'29.2%'},{//I
                     start: play_end(),
                     duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'-0.9%'},{
+                    $('.ends-left').delay(del).velocity({left:'-0.9%'},{
                     duration: dur
                     })
-                     $('.ends-right').delay(del).animate({left:'87.1%'},{
+                     $('.ends-right').delay(del).velocity({left:'87.1%'},{
                     duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'2.1%'},{
+                    $('.bar').delay(del).velocity({left:'2.1%'},{
                     duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'30%'},{//A
+                    $('.bar-tab').delay(del).velocity({left:'30%'},{//A
                     start: play_beg(),
                     duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'-0.3%'},{
+                    $('.ends-left').delay(del).velocity({left:'-0.3%'},{
                     duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'87.7%'},{
+                    $('.ends-right').delay(del).velocity({left:'87.7%'},{
                     duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'2.7%'},{
+                    $('.bar').delay(del).velocity({left:'2.7%'},{
                     duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'30.6%'},{//M
+                    $('.bar-tab').delay(del).velocity({left:'30.6%'},{//M
                     start: play_end(),
                     duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'0.55%'},{
+                    $('.ends-left').delay(del).velocity({left:'0.55%'},{
                     duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'88.55%'},{
+                    $('.ends-right').delay(del).velocity({left:'88.55%'},{
                     duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'3.55%'},{
+                    $('.bar').delay(del).velocity({left:'3.55%'},{
                     duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'31.45%'},{//A
+                    $('.bar-tab').delay(del).velocity({left:'31.45%'},{//A
                     start: play_end(),
                     duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'1.4%'},{
+                    $('.ends-left').delay(del).velocity({left:'1.4%'},{
                     duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'89.4%'},{
+                    $('.ends-right').delay(del).velocity({left:'89.4%'},{
                     duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'4.4%'},{
+                    $('.bar').delay(del).velocity({left:'4.4%'},{
                     duration: dur
                     })
-                    $('.bar-tab').delay(del+100).animate({left:'32.3%'},{//L
+                    $('.bar-tab').delay(del+100).velocity({left:'32.3%'},{//L
                     start: play_beg(),
                     duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'1.9%'},{
+                    $('.ends-left').delay(del).velocity({left:'1.9%'},{
                     duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'89.9%'},{
+                    $('.ends-right').delay(del).velocity({left:'89.9%'},{
                     duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'4.9%'},{
+                    $('.bar').delay(del).velocity({left:'4.9%'},{
                     duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'32.8%'},{//I
+                    $('.bar-tab').delay(del).velocity({left:'32.8%'},{//I
                     start: play_midkey1(),
                     duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'2.4%'},{
+                    $('.ends-left').delay(del).velocity({left:'2.4%'},{
                     duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'90.4%'},{
+                    $('.ends-right').delay(del).velocity({left:'90.4%'},{
                     duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'5.4%'},{
+                    $('.bar').delay(del).velocity({left:'5.4%'},{
                     duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'33.3%'},{//T
+                    $('.bar-tab').delay(del).velocity({left:'33.3%'},{//T
                     start: play_midkey2(),
                     duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'2.9%'},{
+                    $('.ends-left').delay(del).velocity({left:'2.9%'},{
                     duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'90.9%'},{
+                    $('.ends-right').delay(del).velocity({left:'90.9%'},{
                     duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'5.9%'},{
+                    $('.bar').delay(del).velocity({left:'5.9%'},{
                     duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'33.8%'},{//T
+                    $('.bar-tab').delay(del).velocity({left:'33.8%'},{//T
                     start: play_midkey1(),
                     duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'3.4%'},{
+                    $('.ends-left').delay(del).velocity({left:'3.4%'},{
                     duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'91.4%'},{
+                    $('.ends-right').delay(del).velocity({left:'91.4%'},{
                     duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'6.4%'},{
+                    $('.bar').delay(del).velocity({left:'6.4%'},{
                     duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'34.3%'},{//L
+                    $('.bar-tab').delay(del).velocity({left:'34.3%'},{//L
                     start: play_midkey2(),
                     duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'3.9%'},{
+                    $('.ends-left').delay(del).velocity({left:'3.9%'},{
                     duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'91.9%'},{
+                    $('.ends-right').delay(del).velocity({left:'91.9%'},{
                     duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'6.9%'},{
+                    $('.bar').delay(del).velocity({left:'6.9%'},{
                     duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'34.8%'},{//E
+                    $('.bar-tab').delay(del).velocity({left:'34.8%'},{//E
                     start:play_midkey1(),
                     duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'4.4%'},{
-                    duration: dur-55
+                    $('.ends-left').delay(del).velocity({left:'4.4%'},{
+                    duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'92.4%'},{
-                    duration: dur-55
+                    $('.ends-right').delay(del).velocity({left:'92.4%'},{
+                    duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'7.4%'},{
-                    duration: dur-55
+                    $('.bar').delay(del).velocity({left:'7.4%'},{
+                    duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'35.3%'},{//S
+                    $('.bar-tab').delay(del).velocity({left:'35.3%'},{//S
                     start: play_midkey2(),
-                    duration: dur-55,
+                    duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'4.9%'},{
-                    duration: dur-55
+                    $('.ends-left').delay(del).velocity({left:'4.9%'},{
+                    duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'92.9%'},{
-                    duration: dur-55
+                    $('.ends-right').delay(del).velocity({left:'92.9%'},{
+                    duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'7.9%'},{
-                    duration: dur-55
+                    $('.bar').delay(del).velocity({left:'7.9%'},{
+                    duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'35.8%'},{
+                    $('.bar-tab').delay(del).velocity({left:'35.8%'},{
                     start: play_midkey1(),
-                    duration: dur-55,
+                    duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'5.4%'},{
-                    duration: dur-55
+                    $('.ends-left').delay(del).velocity({left:'5.4%'},{
+                    duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'93.4%'},{
-                    duration: dur-55
+                    $('.ends-right').delay(del).velocity({left:'93.4%'},{
+                    duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'8.4%'},{
-                    duration: dur-55
+                    $('.bar').delay(del).velocity({left:'8.4%'},{
+                    duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'36.3%'},{
+                    $('.bar-tab').delay(del).velocity({left:'36.3%'},{
                     start: play_midkey2(),
-                    duration: dur-55,
+                    duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'6%'},{
-                    duration: dur-55
+                    $('.ends-left').delay(del).velocity({left:'6%'},{
+                    duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'94%'},{
-                    duration: dur-55
+                    $('.ends-right').delay(del).velocity({left:'94%'},{
+                    duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'9%'},{
-                    duration: dur-55
+                    $('.bar').delay(del).velocity({left:'9%'},{
+                    duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'36.9%'},{
+                    $('.bar-tab').delay(del).velocity({left:'36.9%'},{
                     start: play_midkey1(),
-                    duration: dur-55,
+                    duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'6.45%'},{
-                    duration: dur-55
+                    $('.ends-left').delay(del).velocity({left:'6.45%'},{
+                    duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'94.45%'},{
-                    duration: dur-55
+                    $('.ends-right').delay(del).velocity({left:'94.45%'},{
+                    duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'9.45%'},{
-                    duration: dur-55
+                    $('.bar').delay(del).velocity({left:'9.45%'},{
+                    duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'37.35%'},{
+                    $('.bar-tab').delay(del).velocity({left:'37.35%'},{
                     start: play_midkey2(),
-                    duration: dur-55,
+                    duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'7%'},{
-                    duration: dur-55
+                    $('.ends-left').delay(del).velocity({left:'7%'},{
+                    duration: dur
                     })
-                     $('.ends-right').delay(del).animate({left:'95%'},{
-                    duration: dur-55
+                     $('.ends-right').delay(del).velocity({left:'95%'},{
+                    duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'10%'},{
-                    duration: dur-55
+                    $('.bar').delay(del).velocity({left:'10%'},{
+                    duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'37.9%'},{
+                    $('.bar-tab').delay(del).velocity({left:'37.9%'},{
                     start: play_midkey1(),
-                    duration: dur-55,
+                    duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'7.6%'},{
-                    duration: dur-55
+                    $('.ends-left').delay(del).velocity({left:'7.6%'},{
+                    duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'95.6%'},{
-                    duration: dur-55
+                    $('.ends-right').delay(del).velocity({left:'95.6%'},{
+                    duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'10.6%'},{
-                    duration: dur-55
+                    $('.bar').delay(del).velocity({left:'10.6%'},{
+                    duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'38.5%'},{
+                    $('.bar-tab').delay(del).velocity({left:'38.5%'},{
                     start: play_midkey2(),
-                    duration: dur-55,
+                    duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'8.1%'},{
-                    duration: dur-55
+                    $('.ends-left').delay(del).velocity({left:'8.1%'},{
+                    duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'96.1%'},{
-                    duration: dur-55
+                    $('.ends-right').delay(del).velocity({left:'96.1%'},{
+                    duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'11.1%'},{
-                    duration: dur-55
+                    $('.bar').delay(del).velocity({left:'11.1%'},{
+                    duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'39%'},{
+                    $('.bar-tab').delay(del).velocity({left:'39%'},{
                     start: play_midkey1(),
-                    duration: dur-55,
+                    duration: dur,
                     complete: function(){
-                    $('.ends-left').delay(del).animate({left:'8.55%'},{
-                    duration: dur-55
+                    $('.ends-left').delay(del).velocity({left:'8.55%'},{
+                    duration: dur
                     })
-                    $('.ends-right').delay(del).animate({left:'96.55%'},{
-                    duration: dur-55
+                    $('.ends-right').delay(del).velocity({left:'96.55%'},{
+                    duration: dur
                     })
-                    $('.bar').delay(del).animate({left:'11.55%'},{
-                    duration: dur-55
+                    $('.bar').delay(del).velocity({left:'11.55%'},{
+                    duration: dur
                     })
-                    $('.bar-tab').delay(del).animate({left:'39.45%'},{
+                    $('.bar-tab').delay(del).velocity({left:'39.45%'},{
                     start: play_end(),
-                    duration: dur-55,
+                    duration: dur,
                     complete: function(){
                     ding.play();
-                    $('.bar-tab').delay(del*12).animate({left:'26.9%'},{duration: dur*5});
-                    $('.ends-left').delay(del*12).animate({left:'-4%'},{duration: dur*5});
-                    $('.ends-right').delay(del*12).animate({left:'84%'},{duration: dur*5});
-                    $('.bar').delay(del*12).animate({left:'-1%'},{duration: dur*5});
+                    $('.bar-tab').delay(del*12).velocity({left:'26.9%'},{duration: dur*5});
+                    $('.ends-left').delay(del*12).velocity({left:'-4%'},{duration: dur*5});
+                    $('.ends-right').delay(del*12).velocity({left:'84%'},{duration: dur*5});
+                    $('.bar').delay(del*12).velocity({left:'-1%'},{duration: dur*5});
                     }   
                     })
                     }   
@@ -423,8 +424,8 @@
                     });
         
                 
-        
-                    $(".page").delay(4000).animate({height:"26.3%"},{
+                    var dur = 145;
+                    $(".page").delay(4600).velocity({height:"26.3%"},{
                         duration: 1000,
                         complete: function(){
                             $(".page").append(
@@ -432,323 +433,323 @@
                             );
                             $(".typewriter2").typewriter({'speed':150});
                             beg_key.play();
-                            $('.ends-left').delay(del).animate({left:'-3.5%'},{
+                            $('.ends-left').delay(del).velocity({left:'-3.5%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'84.5%'},{
+                            $('.ends-right').delay(del).velocity({left:'84.5%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'-0.5%'},{
+                            $('.bar').delay(del).velocity({left:'-0.5%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"27.4%"},{
+                            $(".bar-tab").delay(del).velocity({left:"27.4%"},{
                             start: play_beg(),
                             duration: dur,
                             complete: function(){
-                            $('.ends-left').delay(del).animate({left:'-3%'},{
+                            $('.ends-left').delay(del).velocity({left:'-3%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'85%'},{
+                            $('.ends-right').delay(del).velocity({left:'85%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'0%'},{
+                            $('.bar').delay(del).velocity({left:'0%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"27.9%"},{
+                            $(".bar-tab").delay(del).velocity({left:"27.9%"},{
                             start: play_midkey2(),
                             duration: dur,
                             complete: function(){
-                            $('.ends-left').delay(del).animate({left:'-2.5%'},{
+                            $('.ends-left').delay(del).velocity({left:'-2.5%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'85.5%'},{
+                            $('.ends-right').delay(del).velocity({left:'85.5%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'0.5%'},{
+                            $('.bar').delay(del).velocity({left:'0.5%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"28.4%"},{
+                            $(".bar-tab").delay(del).velocity({left:"28.4%"},{
                             start: play_midkey1(),
                             duration: dur,
                             complete: function(){
-                            $('.ends-left').delay(del).animate({left:'-1.9%'},{
+                            $('.ends-left').delay(del).velocity({left:'-1.9%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'86.1%'},{
+                            $('.ends-right').delay(del).velocity({left:'86.1%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'1.1%'},{
+                            $('.bar').delay(del).velocity({left:'1.1%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"29%"},{
+                            $(".bar-tab").delay(del).velocity({left:"29%"},{
                             start: play_midkey2(),
                             duration: dur,
                             complete: function(){
-                            $('.ends-left').delay(del).animate({left:'-1.4%'},{
-                            duration: dur-55
-                            })
-                            $('.ends-right').delay(del).animate({left:'86.6%'},{
-                            duration: dur-55
-                            })
-                            $('.bar').delay(del).animate({left:'1.6%'},{
-                            duration: dur-55
-                            })
-                            $(".bar-tab").delay(del).animate({left:"29.5%"},{
-                            start: play_midkey1(),
-                            duration: dur-55,
-                            complete: function(){
-                            $('.ends-left').delay(del).animate({left:'-0.9%'},{
-                            duration: dur-55
-                            })
-                            $('.ends-right').delay(del).animate({left:'87.1%'},{
-                            duration: dur-55
-                            })
-                            $('.bar').delay(del).animate({left:'2.1%'},{
-                            duration: dur-55
-                            })
-                            $(".bar-tab").delay(del).animate({left:"30%"},{
-                            start: play_midkey2(),
-                            duration: dur-55,
-                            complete: function(){
-                            $('.ends-left').delay(del).animate({left:'-0.4%'},{
-                            duration: dur-55
-                            })
-                            $('.ends-right').delay(del).animate({left:'87.6%'},{
-                            duration: dur-55
-                            })
-                            $('.bar').delay(del).animate({left:'2.6%'},{
-                            duration: dur-55
-                            })
-                            $(".bar-tab").delay(del).animate({left:"30.5%"},{
-                            start: play_midkey1(),
-                            duration: dur-55,
-                            complete: function(){
-                            $('.ends-left').delay(del).animate({left:'-0.1%'},{
-                            duration: dur-55
-                            })
-                            $('.ends-right').delay(del).animate({left:'88.1%'},{
-                            duration: dur-55
-                            })
-                            $('.bar').delay(del).animate({left:'3.1%'},{
-                            duration: dur-55
-                            })
-                            $(".bar-tab").delay(del).animate({left:"31%"},{
-                            start: play_midkey2(),
-                            duration: dur-55,
-                            complete: function(){
-                            $('.ends-left').delay(del).animate({left:'0.65%'},{
-                            duration: dur-55
-                            })
-                            $('.ends-right').delay(del).animate({left:'88.65%'},{
-                            duration: dur-55
-                            })
-                            $('.bar').delay(del).animate({left:'3.65%'},{
-                            duration: dur-55
-                            })
-                            $(".bar-tab").delay(del).animate({left:"31.55%"},{
-                            start: play_midkey1(),
-                            duration: dur-55,
-                            complete: function(){
-                            $('.ends-left').delay(del).animate({left:'1.5%'},{
-                            duration: dur-55
-                            })
-                            $('.ends-right').delay(del).animate({left:'89.5%'},{
-                            duration: dur-55
-                            })
-                            $('.bar').delay(del).animate({left:'4.5%'},{
-                            duration: dur-55
-                            })
-                            $(".bar-tab").delay(del).animate({left:"32.4%"},{
-                            start: play_end(),
-                            duration: dur-55,
-                            complete: function(){
-                            $('.ends-left').delay(del).animate({left:'2.1%'},{
-                            duration: dur-55
-                            })
-                            $('.ends-right').delay(del).animate({left:'90.1%'},{
-                            duration: dur-55
-                            })
-                            $('.bar').delay(del).animate({left:'5.1%'},{
-                            duration: dur-55
-                            })
-                            $(".bar-tab").delay(del).animate({left:"33%"},{
-                            start: play_beg(),
-                            duration: dur-55,
-                            complete: function(){
-                            $('.ends-left').delay(del).animate({left:'2.9%'},{
-                            duration: dur-55
-                            })
-                            $('.ends-right').delay(del).animate({left:'90.9%'},{
-                            duration: dur-55
-                            })
-                            $('.bar').delay(del).animate({left:'5.9%'},{
-                            duration: dur-55
-                            })
-                            $(".bar-tab").delay(del).animate({left:"33.8%"},{
-                            start: play_end(),
-                            duration: dur-55,
-                            complete: function(){
-                            $('.ends-left').delay(del).animate({left:'3.4%'},{
+                            $('.ends-left').delay(del).velocity({left:'-1.4%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'91.4%'},{
+                            $('.ends-right').delay(del).velocity({left:'86.6%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'6.4%'},{
+                            $('.bar').delay(del).velocity({left:'1.6%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"34.3%"},{
-                            start: play_beg(),
+                            $(".bar-tab").delay(del).velocity({left:"29.5%"},{
+                            start: play_midkey1(),
                             duration: dur,
                             complete: function(){
-                            $('.ends-left').delay(del).animate({left:'3.9%'},{
+                            $('.ends-left').delay(del).velocity({left:'-0.9%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'91.9%'},{
+                            $('.ends-right').delay(del).velocity({left:'87.1%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'6.9%'},{
+                            $('.bar').delay(del).velocity({left:'2.1%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"34.8%"},{
+                            $(".bar-tab").delay(del).velocity({left:"30%"},{
                             start: play_midkey2(),
                             duration: dur,
                             complete: function(){
-                            $('.ends-left').delay(del).animate({left:'4.5%'},{
+                            $('.ends-left').delay(del).velocity({left:'-0.4%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'92.5%'},{
+                            $('.ends-right').delay(del).velocity({left:'87.6%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'7.5%'},{
+                            $('.bar').delay(del).velocity({left:'2.6%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"35.4%"},{
+                            $(".bar-tab").delay(del).velocity({left:"30.5%"},{
                             start: play_midkey1(),
                             duration: dur,
                             complete: function(){
-                            $('.ends-left').delay(del).animate({left:'5.1%'},{
+                            $('.ends-left').delay(del).velocity({left:'-0.1%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'93.1%'},{
+                            $('.ends-right').delay(del).velocity({left:'88.1%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'8.1%'},{
+                            $('.bar').delay(del).velocity({left:'3.1%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"36%"},{
+                            $(".bar-tab").delay(del).velocity({left:"31%"},{
                             start: play_midkey2(),
                             duration: dur,
                             complete: function(){
-                            $('.ends-left').delay(del).animate({left:'5.7%'},{
+                            $('.ends-left').delay(del).velocity({left:'0.65%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'93.7%'},{
+                            $('.ends-right').delay(del).velocity({left:'88.65%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'8.7%'},{
+                            $('.bar').delay(del).velocity({left:'3.65%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"36.6%"},{
+                            $(".bar-tab").delay(del).velocity({left:"31.55%"},{
                             start: play_midkey1(),
                             duration: dur,
                             complete: function(){
-                            $('.ends-left').delay(del).animate({left:'6.2%'},{
+                            $('.ends-left').delay(del).velocity({left:'1.5%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'94.2%'},{
+                            $('.ends-right').delay(del).velocity({left:'89.5%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'9.2%'},{
+                            $('.bar').delay(del).velocity({left:'4.5%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"37.1%"},{
-                            start: play_midkey2(),
-                            duration: dur,
-                            complete: function(){
-                            $('.ends-left').delay(del).animate({left:'6.8%'},{
-                            duration: dur
-                            })
-                            $('.ends-right').delay(del).animate({left:'94.8%'},{
-                            duration: dur
-                            })
-                            $('.bar').delay(del).animate({left:'9.8%'},{
-                            duration: dur
-                            })
-                            $(".bar-tab").delay(del).animate({left:"37.7%"},{
-                            start: play_midkey1(),
-                            duration: dur,
-                            complete: function(){
-                            $('.ends-left').delay(del).animate({left:'7.7%'},{
-                            duration: dur
-                            })
-                            $('.ends-right').delay(del).animate({left:'95.7%'},{
-                            duration: dur
-                            })
-                            $('.bar').delay(del).animate({left:'10.7%'},{
-                            duration: dur
-                            })
-                            $(".bar-tab").delay(del).animate({left:"38.6%"},{
+                            $(".bar-tab").delay(del).velocity({left:"32.4%"},{
                             start: play_end(),
                             duration: dur,
                             complete: function(){
-                            $('.ends-left').delay(del).animate({left:'8.25%'},{
+                            $('.ends-left').delay(del).velocity({left:'2.1%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'96.25%'},{
+                            $('.ends-right').delay(del).velocity({left:'90.1%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'11.25%'},{
+                            $('.bar').delay(del).velocity({left:'5.1%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"39.15%"},{
+                            $(".bar-tab").delay(del).velocity({left:"33%"},{
                             start: play_beg(),
                             duration: dur,
                             complete: function(){
-                            $('.ends-left').delay(del).animate({left:'8.85%'},{
+                            $('.ends-left').delay(del).velocity({left:'2.9%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'96.85%'},{
+                            $('.ends-right').delay(del).velocity({left:'90.9%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'11.85%'},{
+                            $('.bar').delay(del).velocity({left:'5.9%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"39.75%"},{
+                            $(".bar-tab").delay(del).velocity({left:"33.8%"},{
+                            start: play_end(),
+                            duration: dur,
+                            complete: function(){
+                            $('.ends-left').delay(del).velocity({left:'3.4%'},{
+                            duration: dur
+                            })
+                            $('.ends-right').delay(del).velocity({left:'91.4%'},{
+                            duration: dur
+                            })
+                            $('.bar').delay(del).velocity({left:'6.4%'},{
+                            duration: dur
+                            })
+                            $(".bar-tab").delay(del).velocity({left:"34.3%"},{
+                            start: play_beg(),
+                            duration: dur,
+                            complete: function(){
+                            $('.ends-left').delay(del).velocity({left:'3.9%'},{
+                            duration: dur
+                            })
+                            $('.ends-right').delay(del).velocity({left:'91.9%'},{
+                            duration: dur
+                            })
+                            $('.bar').delay(del).velocity({left:'6.9%'},{
+                            duration: dur
+                            })
+                            $(".bar-tab").delay(del).velocity({left:"34.8%"},{
                             start: play_midkey2(),
                             duration: dur,
                             complete: function(){
-                            $('.ends-left').delay(del).animate({left:'9.35%'},{
+                            $('.ends-left').delay(del).velocity({left:'4.5%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'97.35%'},{
+                            $('.ends-right').delay(del).velocity({left:'92.5%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'12.35%'},{
+                            $('.bar').delay(del).velocity({left:'7.5%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"40.25%"},{
+                            $(".bar-tab").delay(del).velocity({left:"35.4%"},{
                             start: play_midkey1(),
                             duration: dur,
                             complete: function(){
-                            $('.ends-left').delay(del).animate({left:'9.85%'},{
+                            $('.ends-left').delay(del).velocity({left:'5.1%'},{
                             duration: dur
                             })
-                            $('.ends-right').delay(del).animate({left:'97.85%'},{
+                            $('.ends-right').delay(del).velocity({left:'93.1%'},{
                             duration: dur
                             })
-                            $('.bar').delay(del).animate({left:'12.85%'},{
+                            $('.bar').delay(del).velocity({left:'8.1%'},{
                             duration: dur
                             })
-                            $(".bar-tab").delay(del).animate({left:"40.75%"},{
+                            $(".bar-tab").delay(del).velocity({left:"36%"},{
+                            start: play_midkey2(),
+                            duration: dur,
+                            complete: function(){
+                            $('.ends-left').delay(del).velocity({left:'5.7%'},{
+                            duration: dur
+                            })
+                            $('.ends-right').delay(del).velocity({left:'93.7%'},{
+                            duration: dur
+                            })
+                            $('.bar').delay(del).velocity({left:'8.7%'},{
+                            duration: dur
+                            })
+                            $(".bar-tab").delay(del).velocity({left:"36.6%"},{
+                            start: play_midkey1(),
+                            duration: dur,
+                            complete: function(){
+                            $('.ends-left').delay(del).velocity({left:'6.2%'},{
+                            duration: dur
+                            })
+                            $('.ends-right').delay(del).velocity({left:'94.2%'},{
+                            duration: dur
+                            })
+                            $('.bar').delay(del).velocity({left:'9.2%'},{
+                            duration: dur
+                            })
+                            $(".bar-tab").delay(del).velocity({left:"37.1%"},{
+                            start: play_midkey2(),
+                            duration: dur,
+                            complete: function(){
+                            $('.ends-left').delay(del).velocity({left:'6.8%'},{
+                            duration: dur
+                            })
+                            $('.ends-right').delay(del).velocity({left:'94.8%'},{
+                            duration: dur
+                            })
+                            $('.bar').delay(del).velocity({left:'9.8%'},{
+                            duration: dur
+                            })
+                            $(".bar-tab").delay(del).velocity({left:"37.7%"},{
+                            start: play_midkey1(),
+                            duration: dur,
+                            complete: function(){
+                            $('.ends-left').delay(del).velocity({left:'7.7%'},{
+                            duration: dur
+                            })
+                            $('.ends-right').delay(del).velocity({left:'95.7%'},{
+                            duration: dur
+                            })
+                            $('.bar').delay(del).velocity({left:'10.7%'},{
+                            duration: dur
+                            })
+                            $(".bar-tab").delay(del).velocity({left:"38.6%"},{
+                            start: play_end(),
+                            duration: dur,
+                            complete: function(){
+                            $('.ends-left').delay(del).velocity({left:'8.25%'},{
+                            duration: dur
+                            })
+                            $('.ends-right').delay(del).velocity({left:'96.25%'},{
+                            duration: dur
+                            })
+                            $('.bar').delay(del).velocity({left:'11.25%'},{
+                            duration: dur
+                            })
+                            $(".bar-tab").delay(del).velocity({left:"39.15%"},{
+                            start: play_beg(),
+                            duration: dur,
+                            complete: function(){
+                            $('.ends-left').delay(del).velocity({left:'8.85%'},{
+                            duration: dur
+                            })
+                            $('.ends-right').delay(del).velocity({left:'96.85%'},{
+                            duration: dur
+                            })
+                            $('.bar').delay(del).velocity({left:'11.85%'},{
+                            duration: dur
+                            })
+                            $(".bar-tab").delay(del).velocity({left:"39.75%"},{
+                            start: play_midkey2(),
+                            duration: dur,
+                            complete: function(){
+                            $('.ends-left').delay(del).velocity({left:'9.35%'},{
+                            duration: dur
+                            })
+                            $('.ends-right').delay(del).velocity({left:'97.35%'},{
+                            duration: dur
+                            })
+                            $('.bar').delay(del).velocity({left:'12.35%'},{
+                            duration: dur
+                            })
+                            $(".bar-tab").delay(del).velocity({left:"40.25%"},{
+                            start: play_midkey1(),
+                            duration: dur,
+                            complete: function(){
+                            $('.ends-left').delay(del).velocity({left:'9.85%'},{
+                            duration: dur
+                            })
+                            $('.ends-right').delay(del).velocity({left:'97.85%'},{
+                            duration: dur
+                            })
+                            $('.bar').delay(del).velocity({left:'12.85%'},{
+                            duration: dur
+                            })
+                            $(".bar-tab").delay(del).velocity({left:"40.75%"},{
                             start: play_end(),
                             duration: dur,
                             complete: function(){
                             ding.play();
-                            $('.bar-tab').delay(del*12).animate({left:'26.9%'},{duration: dur*5});
-                            $('.ends-left').delay(del*12).animate({left:'-4%'},{duration: dur*5});
-                            $('.ends-right').delay(del*12).animate({left:'84%'},{duration: dur*5});
-                            $('.bar').delay(del*12).animate({left:'-1%'},{duration: dur*5});
+                            $('.bar-tab').delay(del*12).velocity({left:'26.9%'},{duration: dur*5});
+                            $('.ends-left').delay(del*12).velocity({left:'-4%'},{duration: dur*5});
+                            $('.ends-right').delay(del*12).velocity({left:'84%'},{duration: dur*5});
+                            $('.bar').delay(del*12).velocity({left:'-1%'},{duration: dur*5});
                             }
                             })
                             }
@@ -799,7 +800,7 @@
                             })
                             
                             
-                            $(".page").delay(4500).animate({height:"75%"},{
+                            $(".page").delay(4500).velocity({height:"75%"},{
                                 duration: 1000,
                                 complete: function(){
                                     $(".icon").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
