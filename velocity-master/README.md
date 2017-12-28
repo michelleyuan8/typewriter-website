@@ -56,8 +56,8 @@ Various fixes including ticker (loading Velocity in a background window) and col
 
 ## Comparisons
 - **CSS transitions** are meant for simple interface flourishes.
-- **jQuery's $.animate()** is slow and poorly-equipped for motion design.
-- **Velocity** is a fast, feature-rich standalone alternative to jQuery's $.animate().
+- **jQuery's $.velocity()** is slow and poorly-equipped for motion design.
+- **Velocity** is a fast, feature-rich standalone alternative to jQuery's $.velocity().
 
 ====
 

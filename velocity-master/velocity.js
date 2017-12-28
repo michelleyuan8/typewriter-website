@@ -680,8 +680,8 @@
 		if (IE <= 8 && !isJQuery) {
 			throw new Error("Velocity: IE8 and below require jQuery to be loaded before Velocity.");
 		} else if (IE <= 7) {
-			/* Revert to jQuery's $.animate(), and lose Velocity's extra features. */
-			jQuery.fn.velocity = jQuery.fn.animate;
+			/* Revert to jQuery's $.velocity(), and lose Velocity's extra features. */
+			jQuery.fn.velocity = jQuery.fn.velocity;
 
 			/* Now that $.fn.velocity is aliased, abort this Velocity declaration. */
 			return;
@@ -2580,7 +2580,7 @@
 			 Argument Overloading
 			 ***************************/
 
-			/* Support is included for jQuery's argument overloading: $.animate(propertyMap [, duration] [, easing] [, complete]).
+			/* Support is included for jQuery's argument overloading: $.velocity(propertyMap [, duration] [, easing] [, complete]).
 			 Overloading is detected by checking for the absence of an object being passed into options. */
 			/* Note: The stop/finish/pause/resume actions do not accept animation options, and are therefore excluded from this check. */
 			if (!/^(stop|finish|finishAll|pause|resume)$/i.test(propertiesMap) && !$.isPlainObject(options)) {
@@ -4060,7 +4060,7 @@
 				/* As per jQuery's $.queue() behavior, to fire the first non-custom-queue entry on an element, the element
 				 must be dequeued if its queue stack consists *solely* of the current call. (This can be determined by checking
 				 for the "inprogress" item that jQuery prepends to active queue stack arrays.) Regardless, whenever the element's
-				 queue is further appended with additional items -- including $.delay()'s or even $.animate() calls, the queue's
+				 queue is further appended with additional items -- including $.delay()'s or even $.velocity() calls, the queue's
 				 first entry is automatically fired. This behavior contrasts that of custom queues, which never auto-fire. */
 				/* Note: When an element set is being subjected to a non-parallel Velocity call, the animation will not begin until
 				 each one of the elements in the set has reached the end of its individually pre-existing queue chain. */
@@ -4132,7 +4132,7 @@
 		/* Turn Velocity into the animation function, extended with the pre-existing Velocity object. */
 		Velocity = $.extend(animate, Velocity);
 		/* For legacy support, also expose the literal animate method. */
-		Velocity.animate = animate;
+		Velocity.velocity = animate;
 
 		/**************
 		 Timing
@@ -4643,7 +4643,7 @@
 		/* Both jQuery and Zepto allow their $.fn object to be extended to allow wrapped elements to be subjected to plugin calls.
 		 If either framework is loaded, register a "velocity" extension pointing to Velocity's core animate() method.  Velocity
 		 also registers itself onto a global container (window.jQuery || window.Zepto || window) so that certain features are
-		 accessible beyond just a per-element scope. This master object contains an .animate() method, which is later assigned to $.fn
+		 accessible beyond just a per-element scope. This master object contains an .velocity() method, which is later assigned to $.fn
 		 (if jQuery or Zepto are present). Accordingly, Velocity can both act on wrapped DOM elements and stand alone for targeting raw DOM elements. */
 		global.Velocity = Velocity;
 

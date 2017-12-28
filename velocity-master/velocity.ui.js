@@ -98,7 +98,7 @@
 				});
 
 				/* Animate the parent element's height adjustment (with a varying duration multiplier for aesthetic benefits). */
-				Velocity.animate(
+				Velocity.velocity(
 						parentNode,
 						{height: (direction === "In" ? "+" : "-") + "=" + totalHeightDelta},
 						{queue: false, easing: "ease-in-out", duration: totalDuration * (direction === "In" ? 0.6 : 1)}
@@ -172,7 +172,7 @@
 								}
 
 								/* Only trigger animateParentHeight() if we're using an In/Out transition. */
-								if (redirectOptions.animateParentHeight && direction) {
+								if (redirectOptions.velocityParentHeight && direction) {
 									animateParentHeight(elements, direction[0], redirectDuration + opts.delay, redirectOptions.stagger);
 								}
 							};
@@ -238,7 +238,7 @@
 									resetOptions.complete = injectFinalCallbacks;
 								}
 
-								Velocity.animate(element, properties.reset, resetOptions);
+								Velocity.velocity(element, properties.reset, resetOptions);
 								/* Only trigger the user's complete callback on the last effect call with the last element in the set. */
 							} else if (finalElement) {
 								injectFinalCallbacks();
@@ -250,7 +250,7 @@
 						}
 					}
 
-					Velocity.animate(element, propertyMap, opts);
+					Velocity.velocity(element, propertyMap, opts);
 				}
 			};
 

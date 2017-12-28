@@ -7915,7 +7915,7 @@ jQuery.fn.extend( {
 		return this.filter( isHidden ).css( "opacity", 0 ).show()
 
 			// animate to the value specified
-			.end().animate( { opacity: to }, speed, easing, callback );
+			.end().velocity( { opacity: to }, speed, easing, callback );
 	},
 	animate: function( prop, speed, easing, callback ) {
 		var empty = jQuery.isEmptyObject( prop ),
@@ -8036,7 +8036,7 @@ jQuery.each( [ "toggle", "show", "hide" ], function( i, name ) {
 	jQuery.fn[ name ] = function( speed, easing, callback ) {
 		return speed == null || typeof speed === "boolean" ?
 			cssFn.apply( this, arguments ) :
-			this.animate( genFx( name, true ), speed, easing, callback );
+			this.velocity( genFx( name, true ), speed, easing, callback );
 	};
 } );
 
@@ -8050,7 +8050,7 @@ jQuery.each( {
 	fadeToggle: { opacity: "toggle" }
 }, function( name, props ) {
 	jQuery.fn[ name ] = function( speed, easing, callback ) {
-		return this.animate( props, speed, easing, callback );
+		return this.velocity( props, speed, easing, callback );
 	};
 } );
 
@@ -10666,7 +10666,7 @@ jQuery.each( [
 
 
 
-jQuery.expr.filters.animated = function( elem ) {
+jQuery.expr.filters.velocityd = function( elem ) {
 	return jQuery.grep( jQuery.timers, function( fn ) {
 		return elem === fn.elem;
 	} ).length;
